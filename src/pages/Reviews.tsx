@@ -1,16 +1,12 @@
-
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import {
-  Card,
-  CardContent,
-} from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Progress } from "@/components/ui/progress";
 import Icon from "@/components/ui/icon";
-import { useState } from "react";
 
 // Типы данных
 interface Review {
@@ -43,8 +39,8 @@ const mockReviews: Review[] = [
     reply: {
       name: "Александр Петров",
       text: "Анна, спасибо за отзыв! Рады, что вам понравился курс. Ждем вас на продвинутом уровне!",
-      date: "16.04.2025"
-    }
+      date: "16.04.2025",
+    },
   },
   {
     id: 2,
@@ -54,7 +50,7 @@ const mockReviews: Review[] = [
     date: "10.04.2025",
     course: "Практический React",
     text: "Очень полезный курс для тех, кто хочет освоить React. Материал подается структурированно, много практики. Единственное, хотелось бы больше примеров реальных проектов. В целом доволен и уже применяю полученные знания в работе.",
-    likes: 18
+    likes: 18,
   },
   {
     id: 3,
@@ -68,8 +64,8 @@ const mockReviews: Review[] = [
     reply: {
       name: "Дмитрий Сидоров",
       text: "Екатерина, большое спасибо за отзыв! Очень рад, что курс оказался полезным. Удачи в применении новых навыков!",
-      date: "03.04.2025"
-    }
+      date: "03.04.2025",
+    },
   },
   {
     id: 4,
@@ -78,7 +74,7 @@ const mockReviews: Review[] = [
     date: "28.03.2025",
     course: "Node.js и Express",
     text: "Курс неплохой, но некоторые темы объясняются слишком быстро. Для новичков в backend-разработке может быть сложно. Хотелось бы более детального разбора сложных концепций. Тем не менее, базовые знания получил и смог создать свой первый сервер.",
-    likes: 7
+    likes: 7,
   },
   {
     id: 5,
@@ -88,7 +84,7 @@ const mockReviews: Review[] = [
     date: "22.03.2025",
     course: "TypeScript для профессионалов",
     text: "Лучший курс по TypeScript, который я нашла! Очень глубокое погружение в типизацию, generics и продвинутые концепции. Благодаря этому курсу я значительно улучшила качество своего кода и получила повышение на работе. Спасибо SoftSkill!",
-    likes: 41
+    likes: 41,
   },
   {
     id: 6,
@@ -98,7 +94,7 @@ const mockReviews: Review[] = [
     date: "18.03.2025",
     course: "Алгоритмы и структуры данных",
     text: "Очень полезный курс для подготовки к техническим собеседованиям. Хорошо объясняются сложные алгоритмы и их применение. Было бы здорово добавить больше задач уровня FAANG-компаний, но в целом я доволен результатом.",
-    likes: 15
+    likes: 15,
   },
   {
     id: 7,
@@ -111,8 +107,8 @@ const mockReviews: Review[] = [
     reply: {
       name: "Команда SoftSkill",
       text: "Наталья, спасибо за честный отзыв. Мы уже работаем над обновлением курса и исправлением указанных проблем. Приносим извинения за доставленные неудобства и предлагаем вам дополнительную консультацию с преподавателем.",
-      date: "11.03.2025"
-    }
+      date: "11.03.2025",
+    },
   },
   {
     id: 8,
@@ -122,8 +118,8 @@ const mockReviews: Review[] = [
     date: "05.03.2025",
     course: "Мобильная разработка с React Native",
     text: "Великолепный курс! За время обучения я разработал полноценное мобильное приложение, которое уже опубликовал в App Store и Google Play. Преподаватель всегда на связи и помогает решать сложные проблемы. Соотношение цена/качество на высоте!",
-    likes: 28
-  }
+    likes: 28,
+  },
 ];
 
 const Reviews = () => {
@@ -135,7 +131,9 @@ const Reviews = () => {
       setFilteredReviews(mockReviews);
       setActiveTab("all");
     } else {
-      setFilteredReviews(mockReviews.filter(review => review.rating === Number(rating)));
+      setFilteredReviews(
+        mockReviews.filter((review) => review.rating === Number(rating)),
+      );
       setActiveTab(rating.toString());
     }
   };
@@ -143,14 +141,17 @@ const Reviews = () => {
   // Расчет статистики по рейтингам
   const ratingStats = {
     totalReviews: mockReviews.length,
-    averageRating: (mockReviews.reduce((acc, review) => acc + review.rating, 0) / mockReviews.length).toFixed(1),
+    averageRating: (
+      mockReviews.reduce((acc, review) => acc + review.rating, 0) /
+      mockReviews.length
+    ).toFixed(1),
     ratingsCount: {
-      5: mockReviews.filter(review => review.rating === 5).length,
-      4: mockReviews.filter(review => review.rating === 4).length,
-      3: mockReviews.filter(review => review.rating === 3).length,
-      2: mockReviews.filter(review => review.rating === 2).length,
-      1: mockReviews.filter(review => review.rating === 1).length,
-    }
+      5: mockReviews.filter((review) => review.rating === 5).length,
+      4: mockReviews.filter((review) => review.rating === 4).length,
+      3: mockReviews.filter((review) => review.rating === 3).length,
+      2: mockReviews.filter((review) => review.rating === 2).length,
+      1: mockReviews.filter((review) => review.rating === 1).length,
+    },
   };
 
   // Рендер звезд рейтинга
@@ -158,10 +159,10 @@ const Reviews = () => {
     return (
       <div className="flex">
         {[1, 2, 3, 4, 5].map((star) => (
-          <Icon 
-            key={star} 
-            name="Star" 
-            className={`h-5 w-5 ${star <= rating ? 'text-yellow-400' : 'text-gray-300'}`} 
+          <Icon
+            key={star}
+            name="Star"
+            className={`h-5 w-5 ${star <= rating ? "text-yellow-400" : "text-gray-300"}`}
           />
         ))}
       </div>
@@ -198,10 +199,7 @@ const Reviews = () => {
             >
               Курсы
             </Link>
-            <Link
-              to="/reviews"
-              className="text-purple-600 font-medium"
-            >
+            <Link to="/reviews" className="text-purple-600 font-medium">
               Отзывы
             </Link>
             <Link
@@ -235,7 +233,8 @@ const Reviews = () => {
         <div className="mb-12 text-center">
           <h1 className="text-4xl font-bold mb-4">Отзывы студентов</h1>
           <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-            Узнайте, что думают наши выпускники о курсах SoftSkill и почему они рекомендуют нас своим друзьям и коллегам.
+            Узнайте, что думают наши выпускники о курсах SoftSkill и почему они
+            рекомендуют нас своим друзьям и коллегам.
           </p>
         </div>
 
@@ -248,25 +247,37 @@ const Reviews = () => {
                   {ratingStats.averageRating}
                 </div>
                 <div className="flex mb-2">
-                  {renderStars(Math.round(parseFloat(ratingStats.averageRating)))}
+                  {renderStars(
+                    Math.round(parseFloat(ratingStats.averageRating)),
+                  )}
                 </div>
                 <p className="text-gray-600">
                   Основано на {ratingStats.totalReviews} отзывах
                 </p>
               </div>
-              
+
               <div className="space-y-3">
                 {[5, 4, 3, 2, 1].map((rating) => (
                   <div key={rating} className="flex items-center">
                     <div className="w-12 font-medium">{rating} ★</div>
                     <div className="flex-1 mx-3">
-                      <Progress 
-                        value={(ratingStats.ratingsCount[rating as keyof typeof ratingStats.ratingsCount] / ratingStats.totalReviews) * 100} 
+                      <Progress
+                        value={
+                          (ratingStats.ratingsCount[
+                            rating as keyof typeof ratingStats.ratingsCount
+                          ] /
+                            ratingStats.totalReviews) *
+                          100
+                        }
                         className="h-2.5"
                       />
                     </div>
                     <div className="w-10 text-right text-gray-600">
-                      {ratingStats.ratingsCount[rating as keyof typeof ratingStats.ratingsCount]}
+                      {
+                        ratingStats.ratingsCount[
+                          rating as keyof typeof ratingStats.ratingsCount
+                        ]
+                      }
                     </div>
                   </div>
                 ))}
@@ -277,7 +288,7 @@ const Reviews = () => {
 
         {/* Фильтр отзывов */}
         <section className="mb-8">
-          <Tabs 
+          <Tabs
             value={activeTab}
             onValueChange={filterReviewsByRating}
             className="flex justify-center"
@@ -320,15 +331,17 @@ const Reviews = () => {
                               <span>Курс: {review.course}</span>
                             </div>
                           </div>
-                          <div>
-                            {renderStars(review.rating)}
-                          </div>
+                          <div>{renderStars(review.rating)}</div>
                         </div>
                         <div className="mt-3">
                           <p className="text-gray-700">{review.text}</p>
                         </div>
                         <div className="mt-4 flex items-center">
-                          <Button variant="ghost" size="sm" className="text-gray-500">
+                          <Button
+                            variant="ghost"
+                            size="sm"
+                            className="text-gray-500"
+                          >
                             <Icon name="ThumbsUp" className="mr-1 h-4 w-4" />
                             Полезно ({review.likes})
                           </Button>
@@ -338,8 +351,12 @@ const Reviews = () => {
                         {review.reply && (
                           <div className="mt-4 pl-6 border-l-2 border-gray-200">
                             <div className="mb-1">
-                              <h4 className="font-semibold">{review.reply.name}</h4>
-                              <div className="text-sm text-gray-500">{review.reply.date}</div>
+                              <h4 className="font-semibold">
+                                {review.reply.name}
+                              </h4>
+                              <div className="text-sm text-gray-500">
+                                {review.reply.date}
+                              </div>
                             </div>
                             <p className="text-gray-700">{review.reply.text}</p>
                           </div>
@@ -351,12 +368,15 @@ const Reviews = () => {
               ))
             ) : (
               <div className="text-center py-12">
-                <Icon name="Search" className="h-12 w-12 text-gray-400 mx-auto mb-4" />
+                <Icon
+                  name="Search"
+                  className="h-12 w-12 text-gray-400 mx-auto mb-4"
+                />
                 <h3 className="text-xl font-medium mb-2">Отзывы не найдены</h3>
                 <p className="text-gray-600 mb-4">
                   По выбранным критериям не найдено ни одного отзыва.
                 </p>
-                <Button 
+                <Button
                   onClick={() => filterReviewsByRating("all")}
                   className="bg-purple-600 hover:bg-purple-700"
                 >
@@ -370,12 +390,18 @@ const Reviews = () => {
         {/* Призыв к действию */}
         <section className="mt-16 bg-gradient-to-r from-purple-600 to-pink-500 text-white p-8 rounded-lg shadow-md">
           <div className="text-center">
-            <h2 className="text-2xl font-bold mb-4">Готовы начать свое обучение?</h2>
+            <h2 className="text-2xl font-bold mb-4">
+              Готовы начать свое обучение?
+            </h2>
             <p className="text-lg mb-6 max-w-2xl mx-auto">
-              Присоединяйтесь к тысячам студентов, которые уже изменили свою карьеру с помощью наших курсов.
+              Присоединяйтесь к тысячам студентов, которые уже изменили свою
+              карьеру с помощью наших курсов.
             </p>
             <Link to="/courses">
-              <Button size="lg" className="bg-white text-purple-600 hover:bg-gray-100">
+              <Button
+                size="lg"
+                className="bg-white text-purple-600 hover:bg-gray-100"
+              >
                 Выбрать курс
               </Button>
             </Link>
@@ -443,13 +469,16 @@ const Reviews = () => {
               <h4 className="font-semibold mb-4">Контакты</h4>
               <ul className="space-y-2">
                 <li className="flex items-center">
-                  <Icon name="Mail" className="mr-2 h-4 w-4" /> info@softskill.ru
+                  <Icon name="Mail" className="mr-2 h-4 w-4" />{" "}
+                  info@softskill.ru
                 </li>
                 <li className="flex items-center">
-                  <Icon name="Phone" className="mr-2 h-4 w-4" /> +7 (800) 555-35-35
+                  <Icon name="Phone" className="mr-2 h-4 w-4" /> +7 (800)
+                  555-35-35
                 </li>
                 <li className="flex items-center">
-                  <Icon name="MapPin" className="mr-2 h-4 w-4" /> Москва, ул. Программистов, 42
+                  <Icon name="MapPin" className="mr-2 h-4 w-4" /> Москва, ул.
+                  Программистов, 42
                 </li>
               </ul>
             </div>
