@@ -1,7 +1,13 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useNavigate, Link } from "react-router-dom";
@@ -18,7 +24,7 @@ const Register = () => {
     email: "",
     password: "",
     confirmPassword: "",
-    agreeTerms: false
+    agreeTerms: false,
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -64,7 +70,10 @@ const Register = () => {
     // Имитация запроса к API
     setTimeout(() => {
       // Здесь в реальном приложении был бы запрос к API
-      localStorage.setItem("user", JSON.stringify({ email: formData.email, name: formData.name }));
+      localStorage.setItem(
+        "user",
+        JSON.stringify({ email: formData.email, name: formData.name }),
+      );
       toast({
         title: "Регистрация успешна",
         description: "Добро пожаловать в SoftSkill!",
@@ -81,66 +90,69 @@ const Register = () => {
           <Link to="/" className="inline-block">
             <h2 className="text-3xl font-bold text-purple-600">SoftSkill</h2>
           </Link>
-          <h2 className="mt-6 text-3xl font-extrabold text-gray-900">Регистрация</h2>
+          <h2 className="mt-6 text-3xl font-extrabold text-gray-900">
+            Регистрация
+          </h2>
         </div>
         <Card>
           <form onSubmit={handleSubmit}>
             <CardHeader>
               <CardDescription>
-                Создайте аккаунт, чтобы получить доступ к курсам и начать обучение в SoftSkill.
+                Создайте аккаунт, чтобы получить доступ к курсам и начать
+                обучение в SoftSkill.
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="space-y-2">
                 <Label htmlFor="name">Имя</Label>
-                <Input 
-                  id="name" 
-                  name="name" 
-                  placeholder="Иван Иванов" 
+                <Input
+                  id="name"
+                  name="name"
+                  placeholder="Иван Иванов"
                   value={formData.name}
                   onChange={handleChange}
-                  required 
+                  required
                 />
               </div>
               <div className="space-y-2">
                 <Label htmlFor="email">Email</Label>
-                <Input 
-                  id="email" 
-                  name="email" 
-                  type="email" 
-                  placeholder="your@email.com" 
+                <Input
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="your@email.com"
                   value={formData.email}
                   onChange={handleChange}
-                  required 
+                  required
                 />
               </div>
               <div className="space-y-2">
                 <Label htmlFor="password">Пароль</Label>
-                <Input 
-                  id="password" 
-                  name="password" 
-                  type="password" 
-                  placeholder="••••••••" 
+                <Input
+                  id="password"
+                  name="password"
+                  type="password"
+                  placeholder="••••••••"
                   value={formData.password}
                   onChange={handleChange}
-                  required 
+                  required
                 />
               </div>
               <div className="space-y-2">
                 <Label htmlFor="confirmPassword">Подтверждение пароля</Label>
-                <Input 
-                  id="confirmPassword" 
-                  name="confirmPassword" 
-                  type="password" 
-                  placeholder="••••••••" 
+                <Input
+                  id="confirmPassword"
+                  name="confirmPassword"
+                  type="password"
+                  placeholder="••••••••"
                   value={formData.confirmPassword}
                   onChange={handleChange}
-                  required 
+                  required
                 />
               </div>
               <div className="flex items-center space-x-2 pt-2">
-                <Checkbox 
-                  id="terms" 
+                <Checkbox
+                  id="terms"
                   checked={formData.agreeTerms}
                   onCheckedChange={handleCheckboxChange}
                 />
@@ -148,26 +160,37 @@ const Register = () => {
                   htmlFor="terms"
                   className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                 >
-                  Я согласен с <a href="#" className="text-purple-600 hover:text-purple-800">условиями использования</a>
+                  Я согласен с{" "}
+                  <a href="#" className="text-purple-600 hover:text-purple-800">
+                    условиями использования
+                  </a>
                 </label>
               </div>
             </CardContent>
             <CardFooter className="flex flex-col space-y-4">
-              <Button 
-                type="submit" 
+              <Button
+                type="submit"
                 className="w-full bg-purple-600 hover:bg-purple-700"
                 disabled={isLoading}
               >
                 {isLoading ? (
                   <>
-                    <Icon name="Loader2" className="mr-2 h-4 w-4 animate-spin" />
+                    <Icon
+                      name="Loader2"
+                      className="mr-2 h-4 w-4 animate-spin"
+                    />
                     Регистрация...
                   </>
-                ) : "Зарегистрироваться"}
+                ) : (
+                  "Зарегистрироваться"
+                )}
               </Button>
               <p className="text-center text-sm text-gray-600">
                 Уже есть аккаунт?{" "}
-                <Link to="/login" className="font-medium text-purple-600 hover:text-purple-800">
+                <Link
+                  to="/login"
+                  className="font-medium text-purple-600 hover:text-purple-800"
+                >
                   Войти
                 </Link>
               </p>

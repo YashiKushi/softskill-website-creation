@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Icon from "@/components/ui/icon";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   return (
@@ -23,44 +24,48 @@ const Index = () => {
             </Badge>
           </div>
           <nav className="hidden md:flex items-center gap-6">
-            <a
-              href="#"
+            <Link
+              to="/"
               className="text-gray-700 hover:text-purple-600 transition-colors"
             >
               Главная
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              to="/about"
               className="text-gray-700 hover:text-purple-600 transition-colors"
             >
               О нас
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              to="/courses"
               className="text-gray-700 hover:text-purple-600 transition-colors"
             >
               Курсы
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              to="/reviews"
               className="text-gray-700 hover:text-purple-600 transition-colors"
             >
               Отзывы
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              to="/contacts"
               className="text-gray-700 hover:text-purple-600 transition-colors"
             >
               Контакты
-            </a>
+            </Link>
           </nav>
           <div className="flex items-center gap-2">
-            <Button variant="outline" className="hidden md:inline-flex">
-              Войти
-            </Button>
-            <Button className="bg-purple-600 hover:bg-purple-700">
-              Регистрация
-            </Button>
+            <Link to="/login">
+              <Button variant="outline" className="hidden md:inline-flex">
+                Войти
+              </Button>
+            </Link>
+            <Link to="/register">
+              <Button className="bg-purple-600 hover:bg-purple-700">
+                Регистрация
+              </Button>
+            </Link>
             <Button variant="ghost" size="icon" className="md:hidden">
               <Icon name="Menu" />
             </Button>
