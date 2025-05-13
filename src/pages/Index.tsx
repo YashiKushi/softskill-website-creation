@@ -1,6 +1,12 @@
-
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Icon from "@/components/ui/icon";
 
@@ -12,18 +18,49 @@ const Index = () => {
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className="text-2xl font-bold text-purple-600">SoftSkill</div>
-            <Badge variant="outline" className="bg-purple-100 text-purple-600">Школа</Badge>
+            <Badge variant="outline" className="bg-purple-100 text-purple-600">
+              Школа
+            </Badge>
           </div>
           <nav className="hidden md:flex items-center gap-6">
-            <a href="#" className="text-gray-700 hover:text-purple-600 transition-colors">Главная</a>
-            <a href="#" className="text-gray-700 hover:text-purple-600 transition-colors">О нас</a>
-            <a href="#" className="text-gray-700 hover:text-purple-600 transition-colors">Курсы</a>
-            <a href="#" className="text-gray-700 hover:text-purple-600 transition-colors">Отзывы</a>
-            <a href="#" className="text-gray-700 hover:text-purple-600 transition-colors">Контакты</a>
+            <a
+              href="#"
+              className="text-gray-700 hover:text-purple-600 transition-colors"
+            >
+              Главная
+            </a>
+            <a
+              href="#"
+              className="text-gray-700 hover:text-purple-600 transition-colors"
+            >
+              О нас
+            </a>
+            <a
+              href="#"
+              className="text-gray-700 hover:text-purple-600 transition-colors"
+            >
+              Курсы
+            </a>
+            <a
+              href="#"
+              className="text-gray-700 hover:text-purple-600 transition-colors"
+            >
+              Отзывы
+            </a>
+            <a
+              href="#"
+              className="text-gray-700 hover:text-purple-600 transition-colors"
+            >
+              Контакты
+            </a>
           </nav>
           <div className="flex items-center gap-2">
-            <Button variant="outline" className="hidden md:inline-flex">Войти</Button>
-            <Button className="bg-purple-600 hover:bg-purple-700">Регистрация</Button>
+            <Button variant="outline" className="hidden md:inline-flex">
+              Войти
+            </Button>
+            <Button className="bg-purple-600 hover:bg-purple-700">
+              Регистрация
+            </Button>
             <Button variant="ghost" size="icon" className="md:hidden">
               <Icon name="Menu" />
             </Button>
@@ -38,16 +75,34 @@ const Index = () => {
         </div>
         <div className="container mx-auto px-4 py-20 relative">
           <div className="max-w-2xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Стань профессиональным разработчиком с SoftSkill</h1>
-            <p className="text-xl mb-8 opacity-90">Развивай технические и soft-навыки с нашей программой обучения. Освой программирование от новичка до профи.</p>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+              Стань профессиональным разработчиком с SoftSkill
+            </h1>
+            <p className="text-xl mb-8 opacity-90">
+              Развивай технические и soft-навыки с нашей программой обучения.
+              Освой программирование от новичка до профи.
+            </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-white text-purple-600 hover:bg-gray-100">Начать обучение</Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">Узнать больше</Button>
+              <Button
+                size="lg"
+                className="bg-white text-purple-600 hover:bg-gray-100"
+              >
+                Начать обучение
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-white text-white hover:bg-white/20"
+              >
+                Узнать больше
+              </Button>
             </div>
-            
+
             <div className="mt-8 bg-white/20 backdrop-blur-sm rounded-lg p-4 border border-white/40 inline-block">
               <Badge className="bg-pink-500 mb-2">Акция</Badge>
-              <p className="text-lg font-semibold">Скидка 50% на все курсы до конца мая!</p>
+              <p className="text-lg font-semibold">
+                Скидка 50% на все курсы до конца мая!
+              </p>
             </div>
           </div>
         </div>
@@ -57,9 +112,19 @@ const Index = () => {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <Badge variant="outline" className="bg-purple-100 text-purple-600 mb-2">Почему мы</Badge>
-            <h2 className="text-3xl font-bold mb-4">Преимущества обучения в SoftSkill</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">Наша школа программирования предлагает уникальный подход к обучению, сочетающий технические навыки и soft skills.</p>
+            <Badge
+              variant="outline"
+              className="bg-purple-100 text-purple-600 mb-2"
+            >
+              Почему мы
+            </Badge>
+            <h2 className="text-3xl font-bold mb-4">
+              Преимущества обучения в SoftSkill
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Наша школа программирования предлагает уникальный подход к
+              обучению, сочетающий технические навыки и soft skills.
+            </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -71,7 +136,10 @@ const Index = () => {
                 <CardTitle>Опытные преподаватели</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">Наши преподаватели - практикующие разработчики с опытом работы в ведущих IT-компаниях.</p>
+                <p className="text-gray-600">
+                  Наши преподаватели - практикующие разработчики с опытом работы
+                  в ведущих IT-компаниях.
+                </p>
               </CardContent>
             </Card>
 
@@ -83,7 +151,10 @@ const Index = () => {
                 <CardTitle>Проектное обучение</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">Учись на реальных проектах и создавай своё портфолио уже во время обучения.</p>
+                <p className="text-gray-600">
+                  Учись на реальных проектах и создавай своё портфолио уже во
+                  время обучения.
+                </p>
               </CardContent>
             </Card>
 
@@ -95,7 +166,10 @@ const Index = () => {
                 <CardTitle>Трудоустройство</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">Помогаем с поиском работы после прохождения курсов. 80% выпускников трудоустраиваются.</p>
+                <p className="text-gray-600">
+                  Помогаем с поиском работы после прохождения курсов. 80%
+                  выпускников трудоустраиваются.
+                </p>
               </CardContent>
             </Card>
           </div>
@@ -106,9 +180,19 @@ const Index = () => {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <Badge variant="outline" className="bg-purple-100 text-purple-600 mb-2">Тарифы</Badge>
-            <h2 className="text-3xl font-bold mb-4">Выберите подходящий тариф</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">Мы предлагаем гибкие тарифные планы для разных потребностей и уровней подготовки.</p>
+            <Badge
+              variant="outline"
+              className="bg-purple-100 text-purple-600 mb-2"
+            >
+              Тарифы
+            </Badge>
+            <h2 className="text-3xl font-bold mb-4">
+              Выберите подходящий тариф
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Мы предлагаем гибкие тарифные планы для разных потребностей и
+              уровней подготовки.
+            </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -117,29 +201,44 @@ const Index = () => {
                 <CardTitle>Базовый</CardTitle>
                 <CardDescription>Для начинающих</CardDescription>
                 <div className="mt-4 flex items-baseline">
-                  <span className="text-3xl font-bold text-gray-900">₽9,990</span>
-                  <span className="ml-2 text-gray-500 line-through">₽19,980</span>
+                  <span className="text-3xl font-bold text-gray-900">
+                    ₽9,990
+                  </span>
+                  <span className="ml-2 text-gray-500 line-through">
+                    ₽19,980
+                  </span>
                   <span className="ml-2 text-sm text-gray-500">/месяц</span>
                 </div>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-3">
                   <li className="flex items-center">
-                    <Icon name="Check" className="mr-2 h-4 w-4 text-green-500" />
+                    <Icon
+                      name="Check"
+                      className="mr-2 h-4 w-4 text-green-500"
+                    />
                     <span>Доступ к 5 базовым курсам</span>
                   </li>
                   <li className="flex items-center">
-                    <Icon name="Check" className="mr-2 h-4 w-4 text-green-500" />
+                    <Icon
+                      name="Check"
+                      className="mr-2 h-4 w-4 text-green-500"
+                    />
                     <span>Проверка домашних заданий</span>
                   </li>
                   <li className="flex items-center">
-                    <Icon name="Check" className="mr-2 h-4 w-4 text-green-500" />
+                    <Icon
+                      name="Check"
+                      className="mr-2 h-4 w-4 text-green-500"
+                    />
                     <span>Сертификат об окончании</span>
                   </li>
                 </ul>
               </CardContent>
               <CardFooter>
-                <Button className="w-full bg-purple-600 hover:bg-purple-700">Выбрать тариф</Button>
+                <Button className="w-full bg-purple-600 hover:bg-purple-700">
+                  Выбрать тариф
+                </Button>
               </CardFooter>
             </Card>
 
@@ -151,33 +250,51 @@ const Index = () => {
                 <CardTitle>Стандарт</CardTitle>
                 <CardDescription>Для тех, кто серьезно</CardDescription>
                 <div className="mt-4 flex items-baseline">
-                  <span className="text-3xl font-bold text-gray-900">₽14,990</span>
-                  <span className="ml-2 text-gray-500 line-through">₽29,980</span>
+                  <span className="text-3xl font-bold text-gray-900">
+                    ₽14,990
+                  </span>
+                  <span className="ml-2 text-gray-500 line-through">
+                    ₽29,980
+                  </span>
                   <span className="ml-2 text-sm text-gray-500">/месяц</span>
                 </div>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-3">
                   <li className="flex items-center">
-                    <Icon name="Check" className="mr-2 h-4 w-4 text-green-500" />
+                    <Icon
+                      name="Check"
+                      className="mr-2 h-4 w-4 text-green-500"
+                    />
                     <span>Доступ ко всем курсам</span>
                   </li>
                   <li className="flex items-center">
-                    <Icon name="Check" className="mr-2 h-4 w-4 text-green-500" />
+                    <Icon
+                      name="Check"
+                      className="mr-2 h-4 w-4 text-green-500"
+                    />
                     <span>Персональный наставник</span>
                   </li>
                   <li className="flex items-center">
-                    <Icon name="Check" className="mr-2 h-4 w-4 text-green-500" />
+                    <Icon
+                      name="Check"
+                      className="mr-2 h-4 w-4 text-green-500"
+                    />
                     <span>Работа над реальными проектами</span>
                   </li>
                   <li className="flex items-center">
-                    <Icon name="Check" className="mr-2 h-4 w-4 text-green-500" />
+                    <Icon
+                      name="Check"
+                      className="mr-2 h-4 w-4 text-green-500"
+                    />
                     <span>Помощь с трудоустройством</span>
                   </li>
                 </ul>
               </CardContent>
               <CardFooter>
-                <Button className="w-full bg-purple-600 hover:bg-purple-700">Выбрать тариф</Button>
+                <Button className="w-full bg-purple-600 hover:bg-purple-700">
+                  Выбрать тариф
+                </Button>
               </CardFooter>
             </Card>
 
@@ -186,33 +303,51 @@ const Index = () => {
                 <CardTitle>Премиум</CardTitle>
                 <CardDescription>Для будущих профессионалов</CardDescription>
                 <div className="mt-4 flex items-baseline">
-                  <span className="text-3xl font-bold text-gray-900">₽24,990</span>
-                  <span className="ml-2 text-gray-500 line-through">₽49,980</span>
+                  <span className="text-3xl font-bold text-gray-900">
+                    ₽24,990
+                  </span>
+                  <span className="ml-2 text-gray-500 line-through">
+                    ₽49,980
+                  </span>
                   <span className="ml-2 text-sm text-gray-500">/месяц</span>
                 </div>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-3">
                   <li className="flex items-center">
-                    <Icon name="Check" className="mr-2 h-4 w-4 text-green-500" />
+                    <Icon
+                      name="Check"
+                      className="mr-2 h-4 w-4 text-green-500"
+                    />
                     <span>Все преимущества Стандарта</span>
                   </li>
                   <li className="flex items-center">
-                    <Icon name="Check" className="mr-2 h-4 w-4 text-green-500" />
+                    <Icon
+                      name="Check"
+                      className="mr-2 h-4 w-4 text-green-500"
+                    />
                     <span>Индивидуальный учебный план</span>
                   </li>
                   <li className="flex items-center">
-                    <Icon name="Check" className="mr-2 h-4 w-4 text-green-500" />
+                    <Icon
+                      name="Check"
+                      className="mr-2 h-4 w-4 text-green-500"
+                    />
                     <span>Гарантированное трудоустройство</span>
                   </li>
                   <li className="flex items-center">
-                    <Icon name="Check" className="mr-2 h-4 w-4 text-green-500" />
+                    <Icon
+                      name="Check"
+                      className="mr-2 h-4 w-4 text-green-500"
+                    />
                     <span>Доступ к закрытому сообществу</span>
                   </li>
                 </ul>
               </CardContent>
               <CardFooter>
-                <Button className="w-full bg-purple-600 hover:bg-purple-700">Выбрать тариф</Button>
+                <Button className="w-full bg-purple-600 hover:bg-purple-700">
+                  Выбрать тариф
+                </Button>
               </CardFooter>
             </Card>
           </div>
@@ -225,33 +360,88 @@ const Index = () => {
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <h3 className="text-xl font-bold mb-4">SoftSkill</h3>
-              <p className="text-gray-400">Школа программирования, где технические навыки сочетаются с развитием soft skills.</p>
+              <p className="text-gray-400">
+                Школа программирования, где технические навыки сочетаются с
+                развитием soft skills.
+              </p>
             </div>
             <div>
               <h4 className="font-semibold mb-4">Навигация</h4>
               <ul className="space-y-2">
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Главная</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">О нас</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Курсы</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Отзывы</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Контакты</a></li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
+                    Главная
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
+                    О нас
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
+                    Курсы
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
+                    Отзывы
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
+                    Контакты
+                  </a>
+                </li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold mb-4">Контакты</h4>
               <ul className="space-y-2">
-                <li className="flex items-center"><Icon name="Mail" className="mr-2 h-4 w-4" /> info@softskill.ru</li>
-                <li className="flex items-center"><Icon name="Phone" className="mr-2 h-4 w-4" /> +7 (800) 555-35-35</li>
-                <li className="flex items-center"><Icon name="MapPin" className="mr-2 h-4 w-4" /> Москва, ул. Программистов, 42</li>
+                <li className="flex items-center">
+                  <Icon name="Mail" className="mr-2 h-4 w-4" />{" "}
+                  info@softskill.ru
+                </li>
+                <li className="flex items-center">
+                  <Icon name="Phone" className="mr-2 h-4 w-4" /> +7 (800)
+                  555-35-35
+                </li>
+                <li className="flex items-center">
+                  <Icon name="MapPin" className="mr-2 h-4 w-4" /> Москва, ул.
+                  Программистов, 42
+                </li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold mb-4">Мы в соцсетях</h4>
               <div className="flex space-x-4">
-                <a href="#" className="hover:text-purple-400 transition-colors"><Icon name="Facebook" /></a>
-                <a href="#" className="hover:text-purple-400 transition-colors"><Icon name="Instagram" /></a>
-                <a href="#" className="hover:text-purple-400 transition-colors"><Icon name="Twitter" /></a>
-                <a href="#" className="hover:text-purple-400 transition-colors"><Icon name="Youtube" /></a>
+                <a href="#" className="hover:text-purple-400 transition-colors">
+                  <Icon name="Facebook" />
+                </a>
+                <a href="#" className="hover:text-purple-400 transition-colors">
+                  <Icon name="Instagram" />
+                </a>
+                <a href="#" className="hover:text-purple-400 transition-colors">
+                  <Icon name="Twitter" />
+                </a>
+                <a href="#" className="hover:text-purple-400 transition-colors">
+                  <Icon name="Youtube" />
+                </a>
               </div>
             </div>
           </div>
