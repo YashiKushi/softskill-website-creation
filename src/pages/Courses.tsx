@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -19,7 +20,6 @@ import {
 } from "@/components/ui/select";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Icon from "@/components/ui/icon";
-import { useState } from "react";
 
 // Типы данных
 interface Course {
@@ -369,6 +369,7 @@ const Courses = () => {
                       )}
                     </div>
                     <Link to={`/courses/${course.id}`}>
+                      ``
                       <Button className="bg-purple-600 hover:bg-purple-700">
                         Подробнее
                       </Button>
