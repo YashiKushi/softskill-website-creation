@@ -37,12 +37,6 @@ const Index = () => {
               О нас
             </Link>
             <Link
-              to="/courses"
-              className="text-gray-700 hover:text-purple-600 transition-colors"
-            >
-              Курсы
-            </Link>
-            <Link
               to="/reviews"
               className="text-gray-700 hover:text-purple-600 transition-colors"
             >
@@ -97,7 +91,7 @@ const Index = () => {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-white text-white hover:bg-white/20"
+                className="border-white text-white font-medium hover:bg-white/20"
               >
                 Узнать больше
               </Button>
@@ -420,7 +414,7 @@ const Index = () => {
               <ul className="space-y-2">
                 <li className="flex items-center">
                   <Icon name="Mail" className="mr-2 h-4 w-4" />{" "}
-                  info@softskill.ru
+                  {/* ... keep existing code */} info@softskill.ru
                 </li>
                 <li className="flex items-center">
                   <Icon name="Phone" className="mr-2 h-4 w-4" /> +7 (800)
