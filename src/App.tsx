@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -13,6 +12,7 @@ import CourseDetails from "./pages/CourseDetails";
 import AboutUs from "./pages/AboutUs";
 import Contacts from "./pages/Contacts";
 import Reviews from "./pages/Reviews";
+// Временно закомментируем не существующие импорты
 import AdminPanel from "./pages/AdminPanel";
 
 const queryClient = new QueryClient();
