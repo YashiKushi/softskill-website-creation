@@ -236,9 +236,11 @@ const Index = () => {
                 </ul>
               </CardContent>
               <CardFooter>
-                <Button className="w-full bg-purple-600 hover:bg-purple-700">
-                  Выбрать тариф
-                </Button>
+                <Link to="/order?plan=basic" className="w-full">
+                  <Button className="w-full bg-purple-600 hover:bg-purple-700">
+                    Выбрать тариф
+                  </Button>
+                </Link>
               </CardFooter>
             </Card>
 
@@ -292,9 +294,11 @@ const Index = () => {
                 </ul>
               </CardContent>
               <CardFooter>
-                <Button className="w-full bg-purple-600 hover:bg-purple-700">
-                  Выбрать тариф
-                </Button>
+                <Link to="/order?plan=standard" className="w-full">
+                  <Button className="w-full bg-purple-600 hover:bg-purple-700">
+                    Выбрать тариф
+                  </Button>
+                </Link>
               </CardFooter>
             </Card>
 
@@ -345,9 +349,11 @@ const Index = () => {
                 </ul>
               </CardContent>
               <CardFooter>
-                <Button className="w-full bg-purple-600 hover:bg-purple-700">
-                  Выбрать тариф
-                </Button>
+                <Link to="/order?plan=premium" className="w-full">
+                  <Button className="w-full bg-purple-600 hover:bg-purple-700">
+                    Выбрать тариф
+                  </Button>
+                </Link>
               </CardFooter>
             </Card>
           </div>

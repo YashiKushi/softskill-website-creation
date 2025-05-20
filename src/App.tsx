@@ -12,8 +12,8 @@ import CourseDetails from "./pages/CourseDetails";
 import AboutUs from "./pages/AboutUs";
 import Contacts from "./pages/Contacts";
 import Reviews from "./pages/Reviews";
-// Временно закомментируем не существующие импорты
 import AdminPanel from "./pages/AdminPanel";
+import OrderForm from "./pages/OrderForm";
 
 const queryClient = new QueryClient();
 
@@ -34,6 +34,7 @@ const App = () => (
           <Route path="/reviews" element={<Reviews />} />
           <Route path="/admin" element={<AdminPanel />} />
           <Route path="/admin/course-editor/:id" element={<CourseDetails />} />
+          <Route path="/order" element={<OrderForm />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
