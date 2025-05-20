@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -206,7 +206,7 @@ const Courses = () => {
   };
 
   // Фильтрация при изменении параметров
-  React.useEffect(() => {
+  useEffect(() => {
     handleFilter();
   }, [searchTerm, selectedCategory, selectedLevel]);
 
@@ -368,8 +368,7 @@ const Courses = () => {
                         </p>
                       )}
                     </div>
-                    <Link to={`/courses/${course.id}`}>
-                      ``
+                    <Link to={`/courses/${course.id}`}>   
                       <Button className="bg-purple-600 hover:bg-purple-700">
                         Подробнее
                       </Button>
@@ -475,8 +474,7 @@ const Courses = () => {
                             <div className="flex items-center text-amber-500 mt-1">
                               <Icon name="Star" className="h-4 w-4" />
                               <span className="ml-1 text-gray-700">
-                                {course.rating} ({course.studentsCount}{" "}
-                                студентов)
+                                {course.rating} ({course.studentsCount} студентов)
                               </span>
                             </div>
                           </CardDescription>
@@ -575,8 +573,7 @@ const Courses = () => {
                               <div className="flex items-center text-amber-500 mt-1">
                                 <Icon name="Star" className="h-4 w-4" />
                                 <span className="ml-1 text-gray-700">
-                                  {course.rating} ({course.studentsCount}{" "}
-                                  студентов)
+                                  {course.rating} ({course.studentsCount} студентов)
                                 </span>
                               </div>
                             </CardDescription>
@@ -628,9 +625,7 @@ const Courses = () => {
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
               <Badge className="bg-white/20 mb-4">Для компаний</Badge>
-              <h2 className="text-3xl font-bold mb-4">
-                Корпоративное обучение
-              </h2>
+              <h2 className="text-3xl font-bold mb-4">Корпоративное обучение</h2>
               <p className="text-lg mb-6">
                 Мы предлагаем специальные программы обучения для компаний.
                 Повысьте квалификацию своих сотрудников и развивайте их навыки с
@@ -671,9 +666,7 @@ const Courses = () => {
         {/* FAQ */}
         <section className="mb-16">
           <div className="text-center mb-8">
-            <h2 className="text-2xl font-bold mb-2">
-              Часто задаваемые вопросы
-            </h2>
+            <h2 className="text-2xl font-bold mb-2">Часто задаваемые вопросы</h2>
             <p className="text-gray-600">
               Нашли ответы на популярные вопросы о наших курсах
             </p>
@@ -682,9 +675,7 @@ const Courses = () => {
           <div className="max-w-3xl mx-auto">
             <div className="bg-white rounded-lg shadow-sm divide-y">
               <div className="p-6">
-                <h3 className="text-lg font-bold mb-2">
-                  Как проходит обучение?
-                </h3>
+                <h3 className="text-lg font-bold mb-2">Как проходит обучение?</h3>
                 <p className="text-gray-600">
                   Обучение проходит в онлайн-формате. Вы получаете доступ к
                   видеоурокам, практическим заданиям и дополнительным
@@ -694,9 +685,7 @@ const Courses = () => {
               </div>
 
               <div className="p-6">
-                <h3 className="text-lg font-bold mb-2">
-                  Сколько времени нужно уделять обучению?
-                </h3>
+                <h3 className="text-lg font-bold mb-2">Сколько времени нужно уделять обучению?</h3>
                 <p className="text-gray-600">
                   Для эффективного обучения рекомендуется выделять минимум 10-15
                   часов в неделю. Однако вы можете учиться в удобном для вас
@@ -705,9 +694,7 @@ const Courses = () => {
               </div>
 
               <div className="p-6">
-                <h3 className="text-lg font-bold mb-2">
-                  Какие инструменты понадобятся для обучения?
-                </h3>
+                <h3 className="text-lg font-bold mb-2">Какие инструменты понадобятся для обучения?</h3>
                 <p className="text-gray-600">
                   Для обучения вам понадобится компьютер с доступом в интернет.
                   Все необходимое программное обеспечение бесплатное, инструкции
@@ -716,9 +703,7 @@ const Courses = () => {
               </div>
 
               <div className="p-6">
-                <h3 className="text-lg font-bold mb-2">
-                  Выдаете ли вы сертификаты?
-                </h3>
+                <h3 className="text-lg font-bold mb-2">Выдаете ли вы сертификаты?</h3>
                 <p className="text-gray-600">
                   Да, после успешного завершения курса вы получите сертификат,
                   который можно добавить в резюме или профиль LinkedIn.
@@ -789,16 +774,13 @@ const Courses = () => {
               <h4 className="font-semibold mb-4">Контакты</h4>
               <ul className="space-y-2">
                 <li className="flex items-center">
-                  <Icon name="Mail" className="mr-2 h-4 w-4" />{" "}
-                  info@softskill.ru
+                  <Icon name="Mail" className="mr-2 h-4 w-4" /> info@softskill.ru
                 </li>
                 <li className="flex items-center">
-                  <Icon name="Phone" className="mr-2 h-4 w-4" /> +7 (800)
-                  555-35-35
+                  <Icon name="Phone" className="mr-2 h-4 w-4" /> +7 (800) 555-35-35
                 </li>
                 <li className="flex items-center">
-                  <Icon name="MapPin" className="mr-2 h-4 w-4" /> Москва, ул.
-                  Программистов, 42
+                  <Icon name="MapPin" className="mr-2 h-4 w-4" /> Москва, ул. Программистов, 42
                 </li>
               </ul>
             </div>
@@ -826,7 +808,6 @@ const Courses = () => {
         </div>
       </footer>
     </div>
-  );
-};
+);
 
 export default Courses;

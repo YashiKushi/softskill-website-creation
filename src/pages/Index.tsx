@@ -1,3 +1,5 @@
+
+import React from "react";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -369,7 +371,7 @@ const Index = () => {
               <ul className="space-y-2">
                 <li>
                   <a
-                    href="#"
+                    href="/"
                     className="text-gray-400 hover:text-white transition-colors"
                   >
                     Главная
@@ -377,7 +379,7 @@ const Index = () => {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="/about"
                     className="text-gray-400 hover:text-white transition-colors"
                   >
                     О нас
@@ -385,15 +387,7 @@ const Index = () => {
                 </li>
                 <li>
                   <a
-                    href="#"
-                    className="text-gray-400 hover:text-white transition-colors"
-                  >
-                    Курсы
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
+                    href="/reviews"
                     className="text-gray-400 hover:text-white transition-colors"
                   >
                     Отзывы
@@ -401,7 +395,7 @@ const Index = () => {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="/contacts"
                     className="text-gray-400 hover:text-white transition-colors"
                   >
                     Контакты
@@ -413,8 +407,8 @@ const Index = () => {
               <h4 className="font-semibold mb-4">Контакты</h4>
               <ul className="space-y-2">
                 <li className="flex items-center">
-                  <Icon name="Mail" className="mr-2 h-4 w-4" />{" "}
-                  {/* ... keep existing code */} info@softskill.ru
+                  <Icon name="Mail" className="mr-2 h-4 w-4" />
+                  info@softskill.ru
                 </li>
                 <li className="flex items-center">
                   <Icon name="Phone" className="mr-2 h-4 w-4" /> +7 (800)
