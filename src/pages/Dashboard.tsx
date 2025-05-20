@@ -315,10 +315,12 @@ const Dashboard = () => {
                           </p>
                         </CardContent>
                         <CardFooter>
-                          <Button className="w-full bg-purple-600 hover:bg-purple-700">
-                            <Icon name="Play" className="mr-2 h-4 w-4" />
-                            Продолжить обучение
-                          </Button>
+                          <Link to={`/courses/${course.id}`} className="w-full">
+                            <Button className="w-full bg-purple-600 hover:bg-purple-700">
+                              <Icon name="Play" className="mr-2 h-4 w-4" />
+                              Продолжить обучение
+                            </Button>
+                          </Link>
                         </CardFooter>
                       </Card>
                     ))}
@@ -361,10 +363,12 @@ const Dashboard = () => {
                         </p>
                       </CardContent>
                       <CardFooter>
-                        <Button className="w-full bg-purple-600 hover:bg-purple-700">
-                          <Icon name="Play" className="mr-2 h-4 w-4" />
-                          Начать обучение
-                        </Button>
+                        <Link to={`/courses/${course.id}`} className="w-full">
+                          <Button className="w-full bg-purple-600 hover:bg-purple-700">
+                            <Icon name="Play" className="mr-2 h-4 w-4" />
+                            Начать обучение
+                          </Button>
+                        </Link>
                       </CardFooter>
                     </Card>
                   ))}
